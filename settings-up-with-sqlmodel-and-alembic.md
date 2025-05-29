@@ -115,4 +115,11 @@ uvicorn app.main:app --reload
 
 ---
 
+In the env.py file you can set the database url by doing
+```py
+config = context.config
+config.set_main_option('sqlalchemy.url', DATABASE_URL) # DATABASE_URL is from your environment
+# Then you can delete the line having sqlalchemy.url = ......
+```
+
 **You now have a FastAPI project with SQLModel and Alembic for migrations!**  
